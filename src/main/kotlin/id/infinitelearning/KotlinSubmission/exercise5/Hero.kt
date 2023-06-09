@@ -52,5 +52,36 @@ class Hero {
 
     */
 
+    fun lari(){
+        checkHealth()
+        println("sedang berlari...")
+        health -= 2
+    }
+
+    fun makan(){
+        checkHealth()
+        println("sedang makan...")
+        health += 2
+    }
+
+    fun minum(){
+        checkHealth()
+        println("sedang minum...")
+        health += 2
+    }
+
+    fun lompat(){
+        checkHealth()
+        println("sedang lompat...")
+        health -= 2
+    }
+
+    fun duduk(){
+        checkHealth()
+        println("sedang duduk...")
+        health += 1
+    }
+
+
 
 }

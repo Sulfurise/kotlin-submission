@@ -10,7 +10,15 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 - Dan cetak setiap variabel ke layar saat fungsi myProfile() di panggil
  */
 fun myProfile() {
+    val namaDepan : String = "Anandito Rafi"
+    val namaBelakang : String = "Putra"
+    val umur : Number = 20
+    val status : Boolean = true
 
+    println("Nama Depan: $namaDepan")
+    println("Nama Belakang: $namaBelakang")
+    println("Umur: $umur")
+    println("Status: ${if (status) "Single" else "Tidak Single"}")
 }
 
 
@@ -18,11 +26,18 @@ fun myProfile() {
  *  Latihan 2
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
-fun groupDetail(groupId: Int, groupMember: List<Any>, session: String): Any {
+fun groupDetail(groupId: Int, groupMember: List<Any>, session: String):Any {
 
+    println("Group ID: $groupId")
+    println("Group Member: $groupMember")
+    println("Session: $session")
 
-    return arrayOf(groupId, groupMember, session)
+    return arrayOf(groupId, groupMember,session)
 }
+
+
+
+
 
 /**
  * Latihan 3
@@ -31,9 +46,12 @@ fun groupDetail(groupId: Int, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myGroup(): String {
-
-    return ""
+    val groupMembers = listOf("Anandito", "Albirrul", "Akmal", "Ramadhan", "Farizul", "Hermawan")
+    val myName = groupMembers[0]
+    return myName
 }
+
+
 
 /**
  * Latihan 4
@@ -46,25 +64,26 @@ fun totalMember(): Int {
     val mentor = arrayOf("Dian", "Shasa", "Hasan", "Reza")
     val countOfGroup = 5
 
-    return 0
+    return mentor.count() + countOfGroup
 
 }
 
 fun main() {
-
     myProfile()
 
     val myGroup = myGroup()
-    println("My Group is: $myGroup")
+    println("Nama saya di dalam grup: $myGroup")
 
     val totalMember = totalMember()
     println("Total Member group + Mentor: $totalMember")
+
+
 
     /**
      *  Latihan 5
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail(1, listOf("Anggota 1", "Anggota 2", "..."), "Morning")
+    groupDetail(2, listOf("Anandito", "Albirrul", "Akmal", "Ramadhan", "Farizul", "Hermawan"), "Morning")
 
 }

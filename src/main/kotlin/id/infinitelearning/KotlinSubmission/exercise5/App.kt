@@ -8,6 +8,7 @@ fun main() {
      *
      */
 
+    val hero = Hero()
 
 
     /**
@@ -17,7 +18,7 @@ fun main() {
      *
      */
 
-
+    hero.setProfile("Anandito", 20, 167)
 
     /**
      * Latihan 3
@@ -25,7 +26,7 @@ fun main() {
      *
      */
 
-
+    hero.profile()
 
     /**
     Challenge:
@@ -43,7 +44,24 @@ fun main() {
      *
      */
 
-
+    repeat(2) {
+        hero.jalan()
+    }
+    repeat(2) {
+        hero.lari()
+    }
+    repeat(1) {
+        hero.makan()
+    }
+    repeat(3) {
+        hero.minum()
+    }
+    repeat(1) {
+        hero.lompat()
+    }
+    repeat(2) {
+        hero.duduk()
+    }
 
 
     /**
@@ -51,6 +69,6 @@ fun main() {
      * Panggil fungsi profile dibawah ini untuk menampilkan status terkini setelah melakukan aktivitas
      *
      */
-
+    hero.profile()
 
 }

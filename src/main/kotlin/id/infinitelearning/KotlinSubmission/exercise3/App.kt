@@ -17,5 +17,36 @@ fun main() {
      */
     // Buat di bawah sini
 
+    println("Masukkan nilai score:")
+    val scoreInput = readLine()
+    val score = scoreInput?.toIntOrNull()
 
+    val result = if (score != null) {
+        evaluateScore(score)
+    } else {
+        "Input tidak bisa diproses. Silahkan masukkan data score dengan benar !!"
+    }
+
+    println(result)
+}
+
+fun evaluateScore(score: Int): String {
+    val result: String
+
+    if (score >= 90) {
+        result = "Selamat! Anda mendapatkan nilai A."
+    } else if (score in 80..89) {
+        result = "Anda mendapatkan nilai B."
+    } else if (score in 70..79) {
+        result = "Anda mendapatkan nilai C."
+    } else if (score in 60..69) {
+        result = "Anda mendapatkan nilai D."
+    } else if (score < 60) {
+        result = "Anda mendapatkan nilai E."
+    } else {
+        result = "Input tidak bisa diproses. Silahkan masukkan data score dengan benar !!"
+    }
+
+
+    return result
 }
